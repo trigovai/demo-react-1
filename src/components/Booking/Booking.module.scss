@@ -1,0 +1,82 @@
+@import "../../styles/variables";
+
+.booking {
+
+  >div {
+    padding: $padding;
+    transition: padding .1s ease-in-out;
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    >div {
+      flex: 1;
+    }
+  }
+
+  &__label {
+    font-size: 1.8rem;
+  }
+
+  &__img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: auto;
+      max-width: 400px;
+      box-shadow: $imgShadow;
+      border-radius: 25px;
+    }
+
+    img:last-child {
+      position: absolute;
+      bottom: 15%;
+      right: 30%;
+      transform: translateX(50%);
+    }
+  }
+
+  &__cards {
+    margin-top: 3rem;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+
+    img {
+      max-width: 50px;
+      margin: 3rem 2rem 3rem 0;
+    }
+
+    div:first-child {
+      font-weight: 700;
+    }
+  }
+}
+@media screen and (max-width: 1050px) {
+  .booking {
+
+    >div {
+      padding: $paddingLG;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .booking {
+
+    >div {
+      padding: $paddingMD;
+    }
+
+    &__wrap {
+      flex-direction: column;
+    }
+  }
+}

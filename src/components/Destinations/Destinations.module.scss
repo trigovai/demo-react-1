@@ -1,0 +1,36 @@
+@import "../../styles/variables";
+
+.destinations {
+  text-align: center;
+
+  >div {
+    padding: $padding;
+  }
+
+  &__label {
+    font-size: 1.8rem;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    >div:last-child {
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 100%;
+        background-image: url(../../assets/imgs/helix.svg);
+        background-repeat: no-repeat;
+        background-position: -20% 50%;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

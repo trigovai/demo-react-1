@@ -1,0 +1,58 @@
+@import "../../styles/variables";
+
+.citiesCard {
+  margin: 6rem 3rem;
+  position: relative;
+  transition: all .2s ease-in-out;
+
+  img {
+    max-height: 450px;
+  }
+
+  &__wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $white;
+    border-radius: 0 0 15px 15px;
+    box-shadow: $shadow;
+    text-align: left;
+    padding: 2.5rem 2rem;
+  }
+
+  &__dest {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__duration {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 2rem;
+    }
+  }
+
+  &__desc {
+    display: none;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+
+    .desc {
+      height: auto;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.desc {
+  height: 0;
+  overflow: hidden;
+}

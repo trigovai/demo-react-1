@@ -1,0 +1,111 @@
+@import "../../styles/variables";
+
+.logo {
+  max-width: 115px;
+}
+
+.nav {
+  background-color: transparent;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $padding;
+  color: $black;
+
+  transition: padding .1s ease-in-out, background-color .2s ease-in-out;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    list-style: none;
+
+    li {
+      margin: 0 3rem;
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.7rem;
+  }
+
+  &__menu {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__toggle {
+    display: none;
+
+    svg {
+      width: 30px;
+      height: 30px;
+      position: relative;
+      z-index: 10;
+    }
+  }
+}
+
+.navActive {
+  background-color: $white;
+  box-shadow: $shadow;
+}
+
+@media screen and (max-width: 1050px) {
+  .nav {
+    padding: $paddingLG;
+
+    &__menu {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 8rem 4rem 2rem;
+      height: 100vh;
+      background-color: $navBG;
+      backdrop-filter: blur(6px);
+      opacity: 0;
+      position: absolute;
+      z-index: 9;
+      top: 0;
+      right: 0;
+      transform: translateX(100%);
+      transition: transform .3s;
+      color: $white;
+
+      ul {
+        flex-direction: column;
+
+        li {
+          margin: 1rem 0;
+        }
+      }
+    }
+
+    &__menuOpen {
+      opacity: 1;
+      transform: translateX(0);
+
+      &+div svg path {
+        stroke: #fff;
+      }
+    }
+
+    &__toggle {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav {
+    padding: $paddingMD;
+  }
+}

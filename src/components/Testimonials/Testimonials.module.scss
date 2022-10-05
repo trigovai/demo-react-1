@@ -1,0 +1,55 @@
+@import "../../styles/variables";
+
+.testimonials {
+
+  >div {
+    padding: $padding;
+    transition: padding .1s ease-in-out;
+  }
+
+  &__wrap {
+    display: flex;
+    gap: 4rem;
+
+    >div {
+      flex: 1;
+    }
+  }
+
+  &__card {
+    box-shadow: $shadow;
+    border-radius: 25px;
+    padding: 4rem;
+    margin: 2rem 2rem 2.5rem;
+  }
+
+  &__cardName {
+    margin-top: 4rem;
+
+    div:first-child {
+      font-weight: 600;
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .testimonials {
+
+    >div {
+      padding: $paddingLG;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .testimonials {
+
+    >div {
+      padding: $paddingMD;
+    }
+
+    &__wrap {
+      flex-direction: column;
+    }
+  }
+}

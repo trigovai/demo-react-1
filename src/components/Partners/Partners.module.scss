@@ -1,0 +1,49 @@
+@import "../../styles/variables";
+
+.partners {
+
+  >div {
+    padding: $padding;
+    transition: padding .1s ease-in-out;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  img {
+    flex: 1;
+    max-width: 160px;
+    min-width: 120px;
+
+    margin: 0 4rem;
+    filter: grayscale(1);
+
+    transition: all .1s ease-in-out;
+
+    &:hover {
+      filter: none;
+      transform: scale(1.1);
+      transform-origin: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .partners {
+
+    >div {
+      padding: $paddingLG;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .partners {
+
+    >div {
+      padding: $paddingMD;
+    }
+  }
+}

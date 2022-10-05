@@ -1,0 +1,77 @@
+@import "../../styles/variables";
+
+.footer {
+
+  >div {
+    padding: $padding;
+    transition: padding .1s ease-in-out;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+
+  &__column {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: inline-block;
+      margin: .5rem 0;
+    }
+  }
+
+  &__logo {
+    flex: 1.5;
+    width: 100%;
+    max-width: 400px;
+
+    img {
+      max-width: 180px;
+    }
+
+    div {
+      margin-top: 1rem;
+      max-width: 300px;
+    }
+  }
+
+  &__social {
+
+    svg {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      box-shadow: $shadow;
+      padding: 1.5rem;
+      margin: 0 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .footer {
+
+    >div {
+      padding: $paddingLG;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footer {
+
+    >div {
+      padding: $paddingMD;
+    }
+  }
+}

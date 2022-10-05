@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+$Poppins: "Poppins", sans-serif;
+$Volkhov: 'Volkhov', serif;
+
+//colors
+$white: #fff;
+$black: #000;
+$textColor: #5E6282;
+$headingColor: #14183E;
+$buttonColor: #F1A501;
+$labelColor: #DF6951;
+$subBG: rgba(223, 215, 249, 0.2);
+$subBTN: linear-gradient(180deg, #FF946D 0%, #FF7D68 100%);
+$navBG: rgba(0, 0, 0, 0.6);
+
+//shadow
+$shadow: 0 2px 15px 0 rgb(0,0,0,0.1);
+$imgShadow: 0 15px 25px 0 rgb(0,0,0,0.1);
+
+//spacing
+$padding: 4rem 6rem;
+$paddingLG: 4rem 2rem;
+$paddingMD: 2rem;
